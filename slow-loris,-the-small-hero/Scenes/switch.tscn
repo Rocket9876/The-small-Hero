@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://dip6lq7wou8jn"]
+
+[ext_resource type="Texture2D" uid="uid://dj8d3wnc28sok" path="res://sprites/switch.png" id="1_hinho"]
+[ext_resource type="Script" uid="uid://n7en4xeas3k5" path="res://Scripts/switch.gd" id="1_swbo4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_swbo4"]
+atlas = ExtResource("1_hinho")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v71cw"]
+atlas = ExtResource("1_hinho")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6rmpw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_swbo4")
+}],
+"loop": 1,
+"name": &"normal",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v71cw")
+}],
+"loop": 1,
+"name": &"pushed",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6rmpw"]
+size = Vector2(14, 26)
+
+[node name="Switch" type="Node2D" unique_id=1043182787]
+script = ExtResource("1_swbo4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=577489353]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_6rmpw")
+animation = &"normal"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=214866172]
+
+[node name="normal" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1517699369]
+polygon = PackedVector2Array(-8, 8, -8, 6, -6, 6, -6, -4, -5, -4, -5, -6, -4, -6, -4, -7, 4, -7, 4, -6, 5, -6, 5, -4, 6, -4, 6, 6, 8, 6, 8, 8)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=815816901]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1700101659]
+position = Vector2(0, -7)
+shape = SubResource("RectangleShape2D_6rmpw")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

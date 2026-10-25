@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://c1aenwlw6n2ix"]
+
+[ext_resource type="PackedScene" uid="uid://b2fg23w8d3oac" path="res://Scenes/spike.tscn" id="1_pevxf"]
+
+[node name="6er" type="Node2D" unique_id=1123925477]
+
+[node name="spike" parent="." unique_id=821125242 instance=ExtResource("1_pevxf")]
+damage = 60.0
+
+[node name="spike2" parent="." unique_id=841461863 instance=ExtResource("1_pevxf")]
+position = Vector2(16, 0)
+damage = 60.0
+
+[node name="spike3" parent="." unique_id=1860027703 instance=ExtResource("1_pevxf")]
+position = Vector2(32, 0)
+damage = 60.0
+
+[node name="spike4" parent="." unique_id=116597843 instance=ExtResource("1_pevxf")]
+position = Vector2(48, 0)
+damage = 60.0
+
+[node name="spike5" parent="." unique_id=1046762463 instance=ExtResource("1_pevxf")]
+position = Vector2(64, 0)
+damage = 60.0
+
+[node name="spike6" parent="." unique_id=371750165 instance=ExtResource("1_pevxf")]
+position = Vector2(80, 0)
+damage = 60.0

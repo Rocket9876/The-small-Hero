@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://b07b4e6sq0hb2"]
+
+[ext_resource type="Texture2D" uid="uid://bhb4obt3o1p0q" path="res://sprites/tree.png" id="1_7wgiq"]
+[ext_resource type="Script" uid="uid://bkjpqxd44rd1t" path="res://Scripts/small_tree.gd" id="1_b2alq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b2alq"]
+atlas = ExtResource("1_7wgiq")
+region = Rect2(128, 0, 128, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ufn5j"]
+atlas = ExtResource("1_7wgiq")
+region = Rect2(256, 0, 128, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_luosy"]
+atlas = ExtResource("1_7wgiq")
+region = Rect2(0, 0, 128, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6rmpw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b2alq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ufn5j")
+}],
+"loop": 1,
+"name": &"fire",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_luosy")
+}],
+"loop": 1,
+"name": &"normal",
+"speed": 5.0
+}]
+
+[node name="small tree" type="Node2D" unique_id=1784087896]
+script = ExtResource("1_b2alq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=248028335]
+z_index = -1
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_6rmpw")
+animation = &"fire"
+frame_progress = 0.9809446

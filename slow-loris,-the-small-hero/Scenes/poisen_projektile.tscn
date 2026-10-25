@@ -1,0 +1,213 @@
+[gd_scene format=3 uid="uid://qfel7iddtbgj"]
+
+[ext_resource type="Script" uid="uid://bi7k7tqve68qy" path="res://Scripts/poisen_projektile.gd" id="1_kksee"]
+[ext_resource type="Texture2D" uid="uid://jffxf2sngefn" path="res://sprites/poisen projektile.png" id="1_txj33"]
+[ext_resource type="Texture2D" uid="uid://dewg8xfxno473" path="res://sprites/animation/poison_splash.png" id="3_oudqi"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6rmpw"]
+radius = 3.0
+height = 15.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0pu66"]
+atlas = ExtResource("3_oudqi")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_il7no"]
+atlas = ExtResource("3_oudqi")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tu0lx"]
+atlas = ExtResource("3_oudqi")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uydas"]
+atlas = ExtResource("3_oudqi")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6rmpw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0pu66")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_il7no")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tu0lx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uydas")
+}],
+"loop": 0,
+"name": &"splash",
+"speed": 15.0
+}]
+
+[sub_resource type="Animation" id="Animation_vpooa"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatedSprite2D:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"splash"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimatedSprite2D:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimatedSprite2D:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_dc5h5"]
+resource_name = "splash"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = false
+tracks/2/path = NodePath("AnimatedSprite2D:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"splash"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = false
+tracks/3/path = NodePath("AnimatedSprite2D:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimatedSprite2D:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.0009999999, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_quj14"]
+_data = {
+&"RESET": SubResource("Animation_vpooa"),
+&"splash": SubResource("Animation_dc5h5")
+}
+
+[node name="poisen projektile" type="CharacterBody2D" unique_id=301598570 groups=["poison"]]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_kksee")
+speed = 500.0
+damage = 10.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1118946733]
+texture_filter = 1
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_txj33")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=601909850]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1047669804]
+position = Vector2(-0.5, 0)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_6rmpw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1360376933]
+visible = false
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_6rmpw")
+animation = &"splash"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=688786973]
+libraries/ = SubResource("AnimationLibrary_quj14")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=684733513]
+position = Vector2(-0.5, 0)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_6rmpw")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

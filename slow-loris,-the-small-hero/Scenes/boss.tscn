@@ -1,0 +1,170 @@
+[gd_scene format=3 uid="uid://bvr8i055kn8xg"]
+
+[ext_resource type="Texture2D" uid="uid://drpex0rlt6uws" path="res://sprites/human-head.png" id="1_0154r"]
+[ext_resource type="Script" uid="uid://cpym511tlywwi" path="res://Scripts/boss.gd" id="1_wwfse"]
+[ext_resource type="Texture2D" uid="uid://bjyvc5saxgu36" path="res://sprites/human leg.png" id="3_cxrok"]
+[ext_resource type="PackedScene" uid="uid://b2fg23w8d3oac" path="res://Scenes/spike.tscn" id="4_ukjjc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6rmpw"]
+size = Vector2(123, 81)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jll8d"]
+size = Vector2(71, 431)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t4xtx"]
+size = Vector2(123, 6)
+
+[sub_resource type="BoxMesh" id="BoxMesh_6rmpw"]
+
+[sub_resource type="Animation" id="Animation_cxrok"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Spikes:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-376, 177)]
+}
+
+[sub_resource type="Animation" id="Animation_ukjjc"]
+resource_name = "damage"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_n725y"]
+resource_name = "swipe"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Spikes:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-376, 177), Vector2(376, 177)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n725y"]
+_data = {
+&"RESET": SubResource("Animation_cxrok"),
+&"damage": SubResource("Animation_ukjjc"),
+&"swipe": SubResource("Animation_n725y")
+}
+
+[sub_resource type="Animation" id="Animation_mh6p8"]
+resource_name = "swipe"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Spikes:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-376, 177), Vector2(376, 177)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qtle2"]
+_data = {
+&"swipe": SubResource("Animation_mh6p8")
+}
+
+[node name="BOSS" type="Node2D" unique_id=271217310]
+script = ExtResource("1_wwfse")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=707869750]
+modulate = Color(1, 1, 1, 0.5529412)
+z_index = -10
+texture_filter = 1
+scale = Vector2(8, 8)
+texture = ExtResource("1_0154r")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=594092505]
+enabled = false
+zoom = Vector2(1.5, 1.5)
+
+[node name="Stage 1 leg" type="Node2D" parent="." unique_id=1431246481]
+
+[node name="leg" type="CharacterBody2D" parent="Stage 1 leg" unique_id=1233513180 groups=["boss"]]
+position = Vector2(0, -500)
+
+[node name="Sprite2D" type="Sprite2D" parent="Stage 1 leg/leg" unique_id=957500292]
+texture = ExtResource("3_cxrok")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage 1 leg/leg" unique_id=1005171877]
+position = Vector2(-0.5, 215.5)
+shape = SubResource("RectangleShape2D_6rmpw")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Stage 1 leg/leg" unique_id=1621185327]
+position = Vector2(-26.5, -40.5)
+shape = SubResource("RectangleShape2D_jll8d")
+
+[node name="Area2D" type="Area2D" parent="Stage 1 leg/leg" unique_id=1946649799]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stage 1 leg/leg/Area2D" unique_id=981056133]
+position = Vector2(-0.5, 259)
+shape = SubResource("RectangleShape2D_t4xtx")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Stage 1 leg/leg" unique_id=1385889727]
+visible = false
+position = Vector2(-22.499996, 7.6293945e-06)
+scale = Vector2(175.00002, 499.99997)
+mesh = SubResource("BoxMesh_6rmpw")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1114609579]
+libraries/ = SubResource("AnimationLibrary_n725y")
+
+[node name="Spikes" type="Node2D" parent="." unique_id=1648957321]
+position = Vector2(-376, 177)
+
+[node name="spike" parent="Spikes" unique_id=821125242 instance=ExtResource("4_ukjjc")]
+damage = 20.0
+
+[node name="spike2" parent="Spikes" unique_id=1662496484 instance=ExtResource("4_ukjjc")]
+position = Vector2(0, -16)
+damage = 20.0
+
+[node name="spike3" parent="Spikes" unique_id=985194154 instance=ExtResource("4_ukjjc")]
+position = Vector2(0, -32)
+damage = 20.0
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="." unique_id=844070481]
+libraries/ = SubResource("AnimationLibrary_qtle2")
+
+[connection signal="body_entered" from="Stage 1 leg/leg/Area2D" to="." method="_on_area_2d_body_entered"]

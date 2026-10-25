@@ -1,0 +1,337 @@
+[gd_scene format=3 uid="uid://dom6tomou6nx4"]
+
+[ext_resource type="Script" uid="uid://c7b71nyymwmj1" path="res://Scripts/slow_loris.gd" id="1_w5gsx"]
+[ext_resource type="Texture2D" uid="uid://cqdwjaewmqp3h" path="res://sprites/animation/in_air.png" id="2_5sl6u"]
+[ext_resource type="Texture2D" uid="uid://1mq2ehwjeqo5" path="res://sprites/animation/Slow loris idle.png" id="2_8xmy8"]
+[ext_resource type="Texture2D" uid="uid://bprr5jy0jesls" path="res://sprites/animation/Slow loris running.png" id="3_77ham"]
+[ext_resource type="Texture2D" uid="uid://bx25i2ufi5h1q" path="res://sprites/animation/dash.png" id="3_n0fma"]
+[ext_resource type="Texture2D" uid="uid://r0csnqr57esl" path="res://sprites/poison_arrow.png" id="6_10wku"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_6rmpw"]
+radius = 18.584
+height = 66.02
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6rmpw"]
+height = 24.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s3e7l"]
+atlas = ExtResource("2_5sl6u")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_10g0q"]
+atlas = ExtResource("2_5sl6u")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ivtq"]
+atlas = ExtResource("2_5sl6u")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pia45"]
+atlas = ExtResource("2_5sl6u")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8hl1d"]
+atlas = ExtResource("3_n0fma")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_77ham"]
+atlas = ExtResource("2_8xmy8")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5sl6u"]
+atlas = ExtResource("2_8xmy8")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n0fma"]
+atlas = ExtResource("3_77ham")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_10wku"]
+atlas = ExtResource("3_77ham")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_71h42"]
+atlas = ExtResource("3_77ham")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n3m13"]
+atlas = ExtResource("3_77ham")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6rmpw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s3e7l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_10g0q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ivtq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pia45")
+}],
+"loop": 1,
+"name": &"air",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8hl1d")
+}],
+"loop": 1,
+"name": &"dash",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_77ham")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5sl6u")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n0fma")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_10wku")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_71h42")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n3m13")
+}],
+"loop": 1,
+"name": &"run",
+"speed": 6.0
+}]
+
+[sub_resource type="Animation" id="Animation_10wku"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("damage:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("healing:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 1, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("fire:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0.5411765, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("smoke:color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.16470589, 0.16470589, 0.16470589, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_s3e7l"]
+resource_name = "fire end"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("smoke:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.16470589, 0.16470589, 0.16470589, 0.5176471), Color(0.16470589, 0.16470589, 0.16470589, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("fire:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 0.5411765, 0, 1), Color(1, 0.5411765, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_10g0q"]
+resource_name = "fire_start"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fire:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 0.5411765, 0, 0), Color(1, 0.5411765, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("smoke:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.16470589, 0.16470589, 0.16470589, 0), Color(0.16470589, 0.16470589, 0.16470589, 0.5176471)]
+}
+
+[sub_resource type="Animation" id="Animation_71h42"]
+resource_name = "healing"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("healing:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 1, 0, 0), Color(0, 1, 0, 0.5294118), Color(0, 1, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_n3m13"]
+resource_name = "take damage"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("damage:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 0), Color(1, 0, 0, 0.5294118), Color(1, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_s3e7l"]
+_data = {
+&"RESET": SubResource("Animation_10wku"),
+&"fire end": SubResource("Animation_s3e7l"),
+&"fire_start": SubResource("Animation_10g0q"),
+&"healing": SubResource("Animation_71h42"),
+&"take damage": SubResource("Animation_n3m13")
+}
+
+[node name="Slow loris" type="CharacterBody2D" unique_id=1619819017 groups=["player"]]
+script = ExtResource("1_w5gsx")
+speed = 300.0
+jump_strength = 300.0
+dash_speed = 500.0
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1348600025]
+visible = false
+position = Vector2(1.2723236, -1.1920929e-06)
+scale = Vector2(0.67267823, 6.9227195)
+mesh = SubResource("CapsuleMesh_6rmpw")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1326211147]
+position = Vector2(0, -26)
+zoom = Vector2(3, 3)
+position_smoothing_speed = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1678146608 groups=["player"]]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_6rmpw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=477559835]
+texture_filter = 1
+position = Vector2(0, -3)
+sprite_frames = SubResource("SpriteFrames_6rmpw")
+animation = &"run"
+
+[node name="poison arrow" type="Sprite2D" parent="." unique_id=459539948]
+z_index = 5
+texture_filter = 1
+texture = ExtResource("6_10wku")
+
+[node name="damage" type="ColorRect" parent="." unique_id=1041801669]
+z_index = 9
+offset_left = -4776.0
+offset_top = -2157.0
+offset_right = 4018.0
+offset_bottom = 2784.0
+color = Color(1, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1094359591]
+libraries/ = SubResource("AnimationLibrary_s3e7l")
+
+[node name="healing" type="ColorRect" parent="." unique_id=561521202]
+offset_left = -4781.0
+offset_top = -2153.0
+offset_right = 4029.0
+offset_bottom = 2780.0
+color = Color(0, 1, 0, 0)
+
+[node name="fire" type="ColorRect" parent="." unique_id=1990384726]
+z_index = -8
+offset_left = -4769.0
+offset_top = -2144.0
+offset_right = 4041.0
+offset_bottom = 2781.0
+color = Color(1, 0.5411765, 0, 0)
+
+[node name="smoke" type="ColorRect" parent="." unique_id=998992058]
+z_index = 9
+offset_left = -4765.0
+offset_top = -2141.0
+offset_right = 4022.0
+offset_bottom = 2777.0
+color = Color(0.16470589, 0.16470589, 0.16470589, 0)
+
+[node name="fire_damage" type="Timer" parent="." unique_id=277473495]
+
+[node name="Control" type="Control" parent="." unique_id=1579048903]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[connection signal="timeout" from="fire_damage" to="." method="_on_fire_damage_timeout"]

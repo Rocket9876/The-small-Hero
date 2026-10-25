@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://dfcebyr13b7h8"]
+
+[ext_resource type="Texture2D" uid="uid://bo5oq4wikdx5i" path="res://sprites/animation/human.png" id="1_byrx8"]
+[ext_resource type="Script" uid="uid://doe64640hmkto" path="res://Scripts/human.gd" id="1_j03jf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j03jf"]
+atlas = ExtResource("1_byrx8")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_073c6"]
+atlas = ExtResource("1_byrx8")
+region = Rect2(256, 0, 256, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6rmpw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j03jf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_073c6")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6rmpw"]
+radius = 14.0
+height = 238.0
+
+[sub_resource type="Animation" id="Animation_073c6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_42mg8"]
+resource_name = "damage"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.125, 0.25),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8atu2"]
+_data = {
+&"RESET": SubResource("Animation_073c6"),
+&"damage": SubResource("Animation_42mg8")
+}
+
+[node name="human" type="CharacterBody2D" unique_id=475187485 groups=["human"]]
+script = ExtResource("1_j03jf")
+health = 100.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=809635413]
+z_index = -1
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_6rmpw")
+frame_progress = 0.35114503
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1216506703]
+visible = false
+position = Vector2(-103, 9)
+shape = SubResource("CapsuleShape2D_6rmpw")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1917750923]
+libraries/ = SubResource("AnimationLibrary_8atu2")

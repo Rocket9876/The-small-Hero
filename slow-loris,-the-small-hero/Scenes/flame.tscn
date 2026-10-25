@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://bbbqr32s45hka"]
+
+[ext_resource type="Script" uid="uid://dmod0dpvp3nq5" path="res://Scripts/flame.gd" id="1_odbei"]
+[ext_resource type="Texture2D" uid="uid://p3hrqlw7pjon" path="res://sprites/fire.png" id="2_bsjlv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tffqe"]
+atlas = ExtResource("2_bsjlv")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bc21j"]
+atlas = ExtResource("2_bsjlv")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6rmpw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tffqe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bc21j")
+}],
+"loop": 1,
+"name": &"fire",
+"speed": 5.0
+}]
+
+[node name="flame" type="Node2D" unique_id=153841447]
+script = ExtResource("1_odbei")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=107649553]
+visible = false
+texture_filter = 1
+position = Vector2(-12, -28)
+sprite_frames = SubResource("SpriteFrames_6rmpw")
+animation = &"fire"
+frame_progress = 0.9020574

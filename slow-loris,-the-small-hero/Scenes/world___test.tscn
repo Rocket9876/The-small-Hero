@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://d3npibrjdb7rg"]
+
+[ext_resource type="Script" uid="uid://3fchjw8puww0" path="res://Scripts/world___test.gd" id="1_03e6x"]
+[ext_resource type="PackedScene" uid="uid://dom6tomou6nx4" path="res://Scenes/slow_loris.tscn" id="1_jsh08"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_6rmpw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6rmpw"]
+size = Vector2(0.99688476, 0.9965871)
+
+[node name="world - test" type="Node2D" unique_id=396620389]
+script = ExtResource("1_03e6x")
+
+[node name="Slow loris" parent="." unique_id=1619819017 instance=ExtResource("1_jsh08")]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1616608784]
+position = Vector2(22.000008, 124)
+scale = Vector2(160.5, 146.5)
+mesh = SubResource("BoxMesh_6rmpw")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="MeshInstance2D" unique_id=1172786318]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MeshInstance2D/StaticBody2D" unique_id=487231725]
+position = Vector2(-5.9604645e-08, 5.9604645e-08)
+shape = SubResource("RectangleShape2D_6rmpw")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="." unique_id=554472975]
+position = Vector2(180.00002, -19)
+scale = Vector2(160.5, 146.5)
+mesh = SubResource("BoxMesh_6rmpw")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="MeshInstance2D2" unique_id=993127986]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MeshInstance2D2/StaticBody2D" unique_id=1373144285]
+position = Vector2(-5.9604645e-08, 5.9604645e-08)
+shape = SubResource("RectangleShape2D_6rmpw")
+
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="." unique_id=55854161]
+position = Vector2(-128.99998, -19)
+scale = Vector2(160.5, 146.5)
+mesh = SubResource("BoxMesh_6rmpw")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="MeshInstance2D3" unique_id=229070097]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MeshInstance2D3/StaticBody2D" unique_id=1522291645]
+position = Vector2(-5.9604645e-08, 5.9604645e-08)
+shape = SubResource("RectangleShape2D_6rmpw")

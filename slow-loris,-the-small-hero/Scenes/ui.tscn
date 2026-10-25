@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://c0dq6jovgayhr"]
+
+[ext_resource type="Script" uid="uid://bvhbhxq48f0ar" path="res://Scripts/ui.gd" id="1_jxero"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wviqb"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jxero"]
+bg_color = Color(0.6, 0, 0, 1)
+
+[node name="ui" type="Control" unique_id=2136972805]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jxero")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1763161282]
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer" unique_id=1193420770]
+visible = false
+z_index = 10
+offset_right = 453.0
+offset_bottom = 43.0
+theme_override_styles/background = SubResource("StyleBoxFlat_wviqb")
+theme_override_styles/fill = SubResource("StyleBoxFlat_jxero")
+value = 50.0
+show_percentage = false
