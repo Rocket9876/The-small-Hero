@@ -23,7 +23,6 @@ func _physics_process(delta: float) -> void:
 		if leg_downwards:
 			pass
 			if leg.is_on_floor():
-				print(5)
 				leg_downwards = false
 				leg.velocity.y = leg_upwards_speed
 		else:
@@ -40,7 +39,6 @@ func _physics_process(delta: float) -> void:
 		if leg_downwards:
 			
 			if leg.is_on_floor():
-				print(5)
 				leg_downwards = false
 				leg.velocity.y = leg_upwards_speed
 		else:

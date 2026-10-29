@@ -46,11 +46,17 @@ sources/0 = SubResource("TileSetAtlasSource_7p6j4")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6rmpw"]
 size = Vector2(513, 272)
 
+[sub_resource type="BoxMesh" id="BoxMesh_6rmpw"]
+size = Vector3(192, 16, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_oovug"]
+size = Vector3(96, 16, 1)
+
 [node name="level 1" type="Node2D" unique_id=1976023451]
 script = ExtResource("1_xfk5q")
 
 [node name="Slow loris" parent="." unique_id=1619819017 instance=ExtResource("1_8ffim")]
-position = Vector2(120, 502)
+position = Vector2(109, 502)
 jump_strength = 200.0
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=2047297881 groups=["wall"]]
@@ -121,6 +127,7 @@ position = Vector2(2104, 544)
 position = Vector2(3393, -128)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1591973546]
+z_index = -5
 texture_filter = 1
 position = Vector2(3738, -103)
 rotation = -0.7853982
@@ -175,5 +182,714 @@ position = Vector2(4772, 1184)
 
 [node name="small tree9" parent="." unique_id=30132618 instance=ExtResource("6_evi0p")]
 position = Vector2(5322, 1056)
+
+[node name="Section 3" type="Node2D" parent="." unique_id=1806994086]
+
+[node name="spike" parent="Section 3" unique_id=1890250332 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 8)
+damage = 30.0
+
+[node name="spike2" parent="Section 3" unique_id=505410401 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 24)
+damage = 30.0
+
+[node name="spike3" parent="Section 3" unique_id=19406499 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 40)
+damage = 30.0
+
+[node name="spike4" parent="Section 3" unique_id=452488716 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 56)
+damage = 30.0
+
+[node name="spike5" parent="Section 3" unique_id=430224064 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 72)
+damage = 30.0
+
+[node name="spike6" parent="Section 3" unique_id=283537590 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 88)
+damage = 30.0
+
+[node name="spike7" parent="Section 3" unique_id=106717000 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 104)
+damage = 30.0
+
+[node name="spike8" parent="Section 3" unique_id=956065937 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 120)
+damage = 30.0
+
+[node name="spike9" parent="Section 3" unique_id=1845312462 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 136)
+damage = 30.0
+
+[node name="spike10" parent="Section 3" unique_id=461832958 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 152)
+damage = 30.0
+
+[node name="spike11" parent="Section 3" unique_id=1502611815 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 168)
+damage = 30.0
+
+[node name="spike12" parent="Section 3" unique_id=1945466191 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 184)
+damage = 30.0
+
+[node name="spike13" parent="Section 3" unique_id=1846089866 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 200)
+damage = 30.0
+
+[node name="spike14" parent="Section 3" unique_id=870795451 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 216)
+damage = 30.0
+
+[node name="spike15" parent="Section 3" unique_id=2040590780 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 232)
+damage = 30.0
+
+[node name="spike16" parent="Section 3" unique_id=30704595 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 248)
+damage = 30.0
+
+[node name="spike17" parent="Section 3" unique_id=1745775079 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 264)
+damage = 30.0
+
+[node name="spike18" parent="Section 3" unique_id=53562027 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 280)
+damage = 30.0
+
+[node name="spike19" parent="Section 3" unique_id=1184371080 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 296)
+damage = 30.0
+
+[node name="spike20" parent="Section 3" unique_id=123264802 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 312)
+damage = 30.0
+
+[node name="spike21" parent="Section 3" unique_id=1865349363 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 328)
+damage = 30.0
+
+[node name="spike22" parent="Section 3" unique_id=536610202 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 344)
+damage = 30.0
+
+[node name="spike23" parent="Section 3" unique_id=521983087 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 360)
+damage = 30.0
+
+[node name="spike24" parent="Section 3" unique_id=1239896107 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 376)
+damage = 30.0
+
+[node name="spike25" parent="Section 3" unique_id=1284099293 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 392)
+damage = 30.0
+
+[node name="spike26" parent="Section 3" unique_id=717954068 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 408)
+damage = 30.0
+
+[node name="spike27" parent="Section 3" unique_id=1171186259 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 424)
+damage = 30.0
+
+[node name="spike28" parent="Section 3" unique_id=1185414426 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 440)
+damage = 30.0
+
+[node name="spike29" parent="Section 3" unique_id=2116129421 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 456)
+damage = 30.0
+
+[node name="spike30" parent="Section 3" unique_id=259484679 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 472)
+damage = 30.0
+
+[node name="spike31" parent="Section 3" unique_id=1859907170 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 488)
+damage = 30.0
+
+[node name="spike32" parent="Section 3" unique_id=489083655 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 504)
+damage = 30.0
+
+[node name="spike33" parent="Section 3" unique_id=1669294102 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 520)
+damage = 30.0
+
+[node name="spike34" parent="Section 3" unique_id=450509590 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 536)
+damage = 30.0
+
+[node name="spike35" parent="Section 3" unique_id=1288935359 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 552)
+damage = 30.0
+
+[node name="spike36" parent="Section 3" unique_id=1094876667 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 568)
+damage = 30.0
+
+[node name="spike37" parent="Section 3" unique_id=1008368329 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 584)
+damage = 30.0
+
+[node name="spike38" parent="Section 3" unique_id=458202555 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 600)
+damage = 30.0
+
+[node name="spike39" parent="Section 3" unique_id=1719994136 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 616)
+damage = 30.0
+
+[node name="spike40" parent="Section 3" unique_id=247597931 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 632)
+damage = 30.0
+
+[node name="spike41" parent="Section 3" unique_id=1325006711 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 648)
+damage = 30.0
+
+[node name="spike42" parent="Section 3" unique_id=1993641005 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 664)
+damage = 30.0
+
+[node name="spike43" parent="Section 3" unique_id=1377192041 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 680)
+damage = 30.0
+
+[node name="spike44" parent="Section 3" unique_id=1829967171 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 696)
+damage = 30.0
+
+[node name="spike45" parent="Section 3" unique_id=770203707 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 712)
+damage = 30.0
+
+[node name="spike46" parent="Section 3" unique_id=1653672804 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 728)
+damage = 30.0
+
+[node name="spike47" parent="Section 3" unique_id=527111890 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 744)
+damage = 30.0
+
+[node name="spike48" parent="Section 3" unique_id=982038458 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 760)
+damage = 30.0
+
+[node name="spike49" parent="Section 3" unique_id=1260051699 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 776)
+damage = 30.0
+
+[node name="spike50" parent="Section 3" unique_id=1536403788 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 792)
+damage = 30.0
+
+[node name="spike51" parent="Section 3" unique_id=1192047080 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 808)
+damage = 30.0
+
+[node name="spike52" parent="Section 3" unique_id=428685091 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 824)
+damage = 30.0
+
+[node name="spike53" parent="Section 3" unique_id=1892313230 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 840)
+damage = 30.0
+
+[node name="spike54" parent="Section 3" unique_id=910997585 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 856)
+damage = 30.0
+
+[node name="spike55" parent="Section 3" unique_id=540367917 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 872)
+damage = 30.0
+
+[node name="spike56" parent="Section 3" unique_id=1843092345 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 888)
+damage = 30.0
+
+[node name="spike57" parent="Section 3" unique_id=250950317 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 904)
+damage = 30.0
+
+[node name="spike58" parent="Section 3" unique_id=54504866 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 920)
+damage = 30.0
+
+[node name="spike59" parent="Section 3" unique_id=2038846162 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 936)
+damage = 30.0
+
+[node name="spike60" parent="Section 3" unique_id=664674858 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 952)
+damage = 30.0
+
+[node name="spike61" parent="Section 3" unique_id=2109868775 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 968)
+damage = 30.0
+
+[node name="spike62" parent="Section 3" unique_id=1279077368 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 984)
+damage = 30.0
+
+[node name="spike63" parent="Section 3" unique_id=1196260300 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 1000)
+damage = 30.0
+
+[node name="spike64" parent="Section 3" unique_id=1223862737 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 1016)
+damage = 30.0
+
+[node name="spike65" parent="Section 3" unique_id=416499549 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 1032)
+damage = 30.0
+
+[node name="spike66" parent="Section 3" unique_id=1276361032 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 1048)
+damage = 30.0
+
+[node name="spike67" parent="Section 3" unique_id=384032612 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 1064)
+damage = 30.0
+
+[node name="spike68" parent="Section 3" unique_id=2097088901 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 1080)
+damage = 30.0
+
+[node name="spike69" parent="Section 3" unique_id=21116645 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 1096)
+damage = 30.0
+
+[node name="spike70" parent="Section 3" unique_id=2065505396 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 1112)
+damage = 30.0
+
+[node name="spike71" parent="Section 3" unique_id=144374594 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 1128)
+damage = 30.0
+
+[node name="spike72" parent="Section 3" unique_id=1051916180 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 1144)
+damage = 30.0
+
+[node name="spike73" parent="Section 3" unique_id=76571904 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 1160)
+damage = 30.0
+
+[node name="spike74" parent="Section 3" unique_id=1529164283 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 1176)
+damage = 30.0
+
+[node name="spike75" parent="Section 3" unique_id=1122970521 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 1192)
+damage = 30.0
+
+[node name="spike76" parent="Section 3" unique_id=1956460521 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 1208)
+damage = 30.0
+
+[node name="spike77" parent="Section 3" unique_id=164181226 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 1224)
+damage = 30.0
+
+[node name="spike78" parent="Section 3" unique_id=255010913 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 1240)
+damage = 30.0
+
+[node name="spike79" parent="Section 3" unique_id=322242027 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 1256)
+damage = 30.0
+
+[node name="spike80" parent="Section 3" unique_id=488716540 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 1272)
+damage = 30.0
+
+[node name="spike81" parent="Section 3" unique_id=1102902147 instance=ExtResource("8_xrdnt")]
+position = Vector2(3672, 1288)
+damage = 30.0
+
+[node name="spike82" parent="Section 3" unique_id=18602414 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, -296)
+damage = 30.0
+
+[node name="spike83" parent="Section 3" unique_id=1871371317 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, -280)
+damage = 30.0
+
+[node name="spike84" parent="Section 3" unique_id=440337441 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, -264)
+damage = 30.0
+
+[node name="spike85" parent="Section 3" unique_id=39108273 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, -248)
+damage = 30.0
+
+[node name="spike86" parent="Section 3" unique_id=1730001594 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, -232)
+damage = 30.0
+
+[node name="spike87" parent="Section 3" unique_id=1358364911 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, -216)
+damage = 30.0
+
+[node name="spike88" parent="Section 3" unique_id=14785815 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, -200)
+damage = 30.0
+
+[node name="spike89" parent="Section 3" unique_id=1739625953 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, -184)
+damage = 30.0
+
+[node name="spike90" parent="Section 3" unique_id=1451436881 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, -168)
+damage = 30.0
+
+[node name="spike91" parent="Section 3" unique_id=1907610550 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, -152)
+damage = 30.0
+
+[node name="spike92" parent="Section 3" unique_id=451024528 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, -136)
+damage = 30.0
+
+[node name="spike93" parent="Section 3" unique_id=86249486 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, -120)
+damage = 30.0
+
+[node name="spike94" parent="Section 3" unique_id=1970245466 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, -104)
+damage = 30.0
+
+[node name="spike95" parent="Section 3" unique_id=1070462038 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, -88)
+damage = 30.0
+
+[node name="spike96" parent="Section 3" unique_id=2084083905 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, -72)
+damage = 30.0
+
+[node name="spike97" parent="Section 3" unique_id=1789145096 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, -56)
+damage = 30.0
+
+[node name="spike98" parent="Section 3" unique_id=726390267 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, -40)
+damage = 30.0
+
+[node name="spike99" parent="Section 3" unique_id=668204162 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, -24)
+damage = 30.0
+
+[node name="spike100" parent="Section 3" unique_id=1774167758 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, -8)
+damage = 30.0
+
+[node name="spike101" parent="Section 3" unique_id=1221441139 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 8)
+damage = 30.0
+
+[node name="spike102" parent="Section 3" unique_id=183466287 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 24)
+damage = 30.0
+
+[node name="spike103" parent="Section 3" unique_id=965427038 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 40)
+damage = 30.0
+
+[node name="spike104" parent="Section 3" unique_id=1351904308 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 56)
+damage = 30.0
+
+[node name="spike105" parent="Section 3" unique_id=1965674052 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 72)
+damage = 30.0
+
+[node name="spike106" parent="Section 3" unique_id=1317977221 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 88)
+damage = 30.0
+
+[node name="spike107" parent="Section 3" unique_id=479485072 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 104)
+damage = 30.0
+
+[node name="spike108" parent="Section 3" unique_id=1818025581 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 120)
+damage = 30.0
+
+[node name="spike109" parent="Section 3" unique_id=1060093247 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 136)
+damage = 30.0
+
+[node name="spike110" parent="Section 3" unique_id=1152200834 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 152)
+damage = 30.0
+
+[node name="spike111" parent="Section 3" unique_id=1641101223 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 168)
+damage = 30.0
+
+[node name="spike112" parent="Section 3" unique_id=1755392844 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 184)
+damage = 30.0
+
+[node name="spike113" parent="Section 3" unique_id=725199705 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 200)
+damage = 30.0
+
+[node name="spike114" parent="Section 3" unique_id=352433149 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 216)
+damage = 30.0
+
+[node name="spike115" parent="Section 3" unique_id=2114353815 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 232)
+damage = 30.0
+
+[node name="spike116" parent="Section 3" unique_id=1606586175 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 248)
+damage = 30.0
+
+[node name="spike117" parent="Section 3" unique_id=74056811 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 264)
+damage = 30.0
+
+[node name="spike118" parent="Section 3" unique_id=211507407 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 280)
+damage = 30.0
+
+[node name="spike119" parent="Section 3" unique_id=1743346346 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 296)
+damage = 30.0
+
+[node name="spike120" parent="Section 3" unique_id=339611046 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 312)
+damage = 30.0
+
+[node name="spike121" parent="Section 3" unique_id=1591669022 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 328)
+damage = 30.0
+
+[node name="spike122" parent="Section 3" unique_id=1501878333 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 344)
+damage = 30.0
+
+[node name="spike123" parent="Section 3" unique_id=1095841247 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 360)
+damage = 30.0
+
+[node name="spike124" parent="Section 3" unique_id=1919062987 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 376)
+damage = 30.0
+
+[node name="spike125" parent="Section 3" unique_id=1389045560 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 392)
+damage = 30.0
+
+[node name="spike126" parent="Section 3" unique_id=1423032023 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 408)
+damage = 30.0
+
+[node name="spike127" parent="Section 3" unique_id=379716114 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 424)
+damage = 30.0
+
+[node name="spike128" parent="Section 3" unique_id=396343878 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 440)
+damage = 30.0
+
+[node name="spike129" parent="Section 3" unique_id=2142143476 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 456)
+damage = 30.0
+
+[node name="spike130" parent="Section 3" unique_id=1350825006 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 472)
+damage = 30.0
+
+[node name="spike131" parent="Section 3" unique_id=1641272931 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 488)
+damage = 30.0
+
+[node name="spike132" parent="Section 3" unique_id=375837613 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 504)
+damage = 30.0
+
+[node name="spike133" parent="Section 3" unique_id=1951223676 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 520)
+damage = 30.0
+
+[node name="spike134" parent="Section 3" unique_id=1585927072 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 536)
+damage = 30.0
+
+[node name="spike135" parent="Section 3" unique_id=1720791864 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 552)
+damage = 30.0
+
+[node name="spike136" parent="Section 3" unique_id=119602225 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 568)
+damage = 30.0
+
+[node name="spike137" parent="Section 3" unique_id=1512136202 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 584)
+damage = 30.0
+
+[node name="spike138" parent="Section 3" unique_id=733217045 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 600)
+damage = 30.0
+
+[node name="spike139" parent="Section 3" unique_id=649810311 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 616)
+damage = 30.0
+
+[node name="spike140" parent="Section 3" unique_id=408440286 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 632)
+damage = 30.0
+
+[node name="spike141" parent="Section 3" unique_id=370289206 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 648)
+damage = 30.0
+
+[node name="spike142" parent="Section 3" unique_id=482796388 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 664)
+damage = 30.0
+
+[node name="spike143" parent="Section 3" unique_id=122107801 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 680)
+damage = 30.0
+
+[node name="spike144" parent="Section 3" unique_id=83253882 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 696)
+damage = 30.0
+
+[node name="spike145" parent="Section 3" unique_id=1413041004 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 712)
+damage = 30.0
+
+[node name="spike146" parent="Section 3" unique_id=573371288 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 728)
+damage = 30.0
+
+[node name="spike147" parent="Section 3" unique_id=283932796 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 744)
+damage = 30.0
+
+[node name="spike148" parent="Section 3" unique_id=638418247 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 760)
+damage = 30.0
+
+[node name="spike149" parent="Section 3" unique_id=163597648 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 776)
+damage = 30.0
+
+[node name="spike150" parent="Section 3" unique_id=892191404 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 792)
+damage = 30.0
+
+[node name="spike151" parent="Section 3" unique_id=1246357743 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 808)
+damage = 30.0
+
+[node name="spike152" parent="Section 3" unique_id=159442176 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 824)
+damage = 30.0
+
+[node name="spike153" parent="Section 3" unique_id=365278755 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 840)
+damage = 30.0
+
+[node name="spike154" parent="Section 3" unique_id=1253941453 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 856)
+damage = 30.0
+
+[node name="spike155" parent="Section 3" unique_id=1405325948 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 872)
+damage = 30.0
+
+[node name="spike156" parent="Section 3" unique_id=1744122917 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 888)
+damage = 30.0
+
+[node name="spike157" parent="Section 3" unique_id=1739103830 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 904)
+damage = 30.0
+
+[node name="spike158" parent="Section 3" unique_id=990956880 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 920)
+damage = 30.0
+
+[node name="spike159" parent="Section 3" unique_id=415143411 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 936)
+damage = 30.0
+
+[node name="spike160" parent="Section 3" unique_id=879672797 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 952)
+damage = 30.0
+
+[node name="spike161" parent="Section 3" unique_id=664282196 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 968)
+damage = 30.0
+
+[node name="spike162" parent="Section 3" unique_id=1176901815 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 984)
+damage = 30.0
+
+[node name="spike163" parent="Section 3" unique_id=1105561509 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 1000)
+damage = 30.0
+
+[node name="spike164" parent="Section 3" unique_id=1652812128 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 1016)
+damage = 30.0
+
+[node name="spike165" parent="Section 3" unique_id=697312440 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 1032)
+damage = 30.0
+
+[node name="spike166" parent="Section 3" unique_id=837214256 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 1048)
+damage = 30.0
+
+[node name="spike167" parent="Section 3" unique_id=1009092859 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 1064)
+damage = 30.0
+
+[node name="spike168" parent="Section 3" unique_id=1385913864 instance=ExtResource("8_xrdnt")]
+position = Vector2(4136, 1080)
+damage = 30.0
+
+[node name="6er6" parent="." unique_id=640757250 instance=ExtResource("15_oovug")]
+position = Vector2(3688, 216)
+
+[node name="6er7" parent="." unique_id=67239058 instance=ExtResource("15_oovug")]
+position = Vector2(3784, 216)
+
+[node name="6er8" parent="." unique_id=1268246104 instance=ExtResource("15_oovug")]
+position = Vector2(3944, 728)
+
+[node name="6er10" parent="." unique_id=1928096918 instance=ExtResource("15_oovug")]
+position = Vector2(3854, 440)
+
+[node name="6er13" parent="." unique_id=1102999579 instance=ExtResource("15_oovug")]
+position = Vector2(4040, 728)
+
+[node name="section 3 warning" type="Node2D" parent="." unique_id=435244611]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="section 3 warning" unique_id=326252681]
+modulate = Color(1, 0, 0, 1)
+z_index = -10
+position = Vector2(3776, 120)
+mesh = SubResource("BoxMesh_6rmpw")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="section 3 warning" unique_id=725321779]
+modulate = Color(1, 0, 0, 1)
+z_index = -10
+position = Vector2(3894, 344)
+mesh = SubResource("BoxMesh_oovug")
+
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="section 3 warning" unique_id=652131369]
+modulate = Color(1, 0, 0, 1)
+z_index = -10
+position = Vector2(4032, 632)
+mesh = SubResource("BoxMesh_6rmpw")
 
 [connection signal="body_entered" from="Boss_fightzone" to="." method="_on_boss_fightzone_body_entered"]

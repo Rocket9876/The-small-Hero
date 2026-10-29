@@ -128,6 +128,7 @@ func shoot():
 func start_wall():
 	if is_on_wall_only() and not wall:
 		horizontal_motion = 0
+		$AnimationPlayer2.play("RESET")
 		if get_wall_normal().x < 0:
 			wall = "right"
 			velocity.x = 1000
